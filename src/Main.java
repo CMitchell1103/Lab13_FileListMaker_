@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.io.*;
-import java.nio.file.*;
+
 
 
 public class Main {
@@ -66,14 +65,14 @@ public class Main {
     }
 
     private static void addItem(Scanner scanner) {
-        System.out.print("Enter the item to add: ");
+        System.out.print("Enter the item you want to add: ");
         String item = scanner.nextLine();
         itemList.add(item);
         needsToBeSaved = true;
     }
 
     private static void deleteItem(Scanner scanner) {
-        System.out.print("Enter the index of the item to delete: ");
+        System.out.print("Enter the index of the item you want to delete: ");
         int index = Integer.parseInt(scanner.nextLine());
         if (index >= 0 && index < itemList.size()) {
             itemList.remove(index);
